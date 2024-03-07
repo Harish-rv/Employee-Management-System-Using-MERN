@@ -1,0 +1,31 @@
+
+<%- include('../partials/header.ejs'); %>
+<style>
+    
+</style>
+<div class="employee-checkin">
+    <div class="checkInOut-box">
+        <div class="logo"><img src="images/logo.png" alt=""></div>
+        <div class="back"><a href="/">Home</a></div>
+        <form action="checkin-process" method="post">
+            <div class="form-group">
+                <label for="EmployeeName">Employee Name</label>
+                <select name="Employeeid" class="form-control" id="EmployeeName">
+                    <option value="">--Select--</option>
+                    <% employeeList.forEach(employee => { %>
+                    <option value="<%= employee._id %>"><%= employee.employee_name %></option>
+                    <% }); %>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" placeholder="********" class="form-control" name="password" id="password">
+            </div>
+            <div class="form-group">
+                <input type="submit" style="background-color: black;" class="form-control btn btn-dark" id="password">
+            </div>
+        </form>
+    </div>
+    <!-- <div class="checkout"><a href="#!">CheckOut</a></div> -->
+</div>
+<%- include('../partials/footer.ejs'); %>
