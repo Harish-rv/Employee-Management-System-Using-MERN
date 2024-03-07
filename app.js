@@ -22,5 +22,5 @@ app.use('/admin',require('./server/routes/AdminRouter'));
 
 connectDB();
 app.listen(port,()=>{
-    console.log('listening post '+port);
+    console.log('listening post is '+port);
 });
